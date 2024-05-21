@@ -1,0 +1,326 @@
+.left-sidebar{
+    @extend %margin-button-large;
+
+    .panel:last-of-type{
+        margin: 0;
+    }
+    margin-left: -15px;
+}
+
+.vertical-slider{
+
+    border-radius: 4px;
+    overflow: hidden;
+    &__image{
+        width: 100%;
+    }
+}
+
+.user-login{
+    position: relative;
+
+    &__tabs{
+        position: absolute;
+        top: 0;
+        right: 15px;
+        border: none;
+
+        a{
+            background-color: transparent !important;
+            border: none !important;
+            color: $color-gray;
+            padding: 14px 5px 11px !important;
+
+        }
+        .active a{
+            color: $color-light !important;
+        }
+    }
+}
+
+.site-news-item{
+    clear: both;
+    position: relative;
+  
+
+    &:not(:last-of-type){
+        min-height: 85px;
+        margin-bottom: $gap; 
+
+
+        &::after{
+            position: absolute;
+            right: 0;
+            bottom: -5px;
+            height: 1px;
+            width: calc(100% - 85px);
+            content: "";
+            background-color: $color-gray;
+        }
+    
+    }
+    
+   
+    &:hover{
+        a{
+            color: $color-accent;
+
+        }
+
+        .site-news-item__image{
+            background-color: $color-accent;
+            border-color: $color-accent;
+        }
+    }
+
+    &__image{
+     float: left ;
+     width: 75px;
+     margin: 0 10px 10px 0;   
+    }
+
+    &__title{
+    margin-bottom: 10px;
+
+    a{
+        transition: color 0.25s;
+        @include block-shortener( 1rem,  1.5,  50px, 2);
+    }
+    }
+
+    &__date{
+    text-align: right;
+    font-size: 0.8rem;
+    color: $color-gray-dark ;
+    }
+}
+
+.top-films { 
+
+    &__body{
+    padding-right: 0;
+    padding-left: 0;
+    }
+
+    &__list{
+        margin-bottom: 0;
+
+    }
+
+    &__item{
+        background-color: transparent;
+        margin-right: -1px;
+        margin-left: -1px;
+        color: $color-primary !important;
+        padding-right: 50px;
+
+
+
+        &:first-child{
+            border-radius: 0;
+            border-top: none;
+        }
+
+
+        &:last-child{
+            border-radius: 0;
+            border-bottom: none;
+        }
+
+    &:hover,
+    &:focus{
+        background-color: $color-accent !important;
+        color: $color-light !important;
+        border-color: $color-accent;
+
+        .badge{
+            background-color: $color-dark;
+        }
+    }
+
+    }
+
+    &__badge{
+       position: absolute;
+       top: 50%;
+       right: $gap;
+       transform: translateY(-50%);
+    }
+}
+
+
+.new-films{
+width: 100%;
+
+    h1{     
+      font-weight: 400;
+      font-family: "PT Serif";
+
+      @media (min-width: 576px){
+      margin: -9.99999999px 0 1em 0;
+      font-size: 3rem;
+}
+
+     @media (max-width: 575.8px){
+     margin: 0 0 1em;
+     font-size: 2rem;
+}
+      
+      
+    
+    }
+     &__title{
+     text-align: left;  
+     }
+
+    &-item{
+        &__caption{
+            text-align: center;
+        }
+
+        &__title{
+            @include text-decoration
+         }
+
+         &__thumbnail{
+            width: 200.63px;
+            height: 300.08px;
+
+            &:focus,
+            &:hover{
+                background-color: $color-accent;
+
+                .new-films-item__title{
+                color: $color-light;
+            }
+            }
+        }
+
+       
+    }
+
+   &-row{
+    margin-left: -15px;
+}
+ }
+
+.top-week{
+    width: 100%;
+
+    h2{     
+      font-weight: 400;
+      font-family: "PT Serif";
+
+      @media (min-width: 576px){
+          margin: 60px 0 45px 0;
+          font-size: 2.5rem;
+      }
+
+      @media (max-width: 575.8px){
+          margin: 45px 0 30px 0;
+          font-size: 1.75rem;
+      }
+      
+      
+    
+    
+    }
+    
+
+    &-item{
+        &__caption{
+            text-align: center;
+        }
+
+        &__title{
+            @include text-decoration
+         }
+
+         &__thumbnail{
+            width: 200.63px;
+            height: 300.08px;
+
+            &:focus,
+            &:hover{
+                background-color: $color-accent;
+
+                .top-week-item__title{
+                color: $color-light;
+            }
+            }
+        }
+    }
+
+   &-row{
+    margin-left: -15px;
+}
+}
+ 
+.film-news {
+   
+    h2{     
+        font-weight: 400;
+        font-family: "PT Serif";
+  
+        @media (min-width: 576px){
+            margin: 60px 0 45px 0;
+            font-size: 2.5rem;
+        }
+  
+        @media (max-width: 575.8px){
+            margin: 45px 0 30px 0;
+            font-size: 1.75rem;
+        }
+    }
+
+    &-item{
+
+        &__image{
+            width: 100%;
+        }
+
+        &__button{
+            float: right;
+            margin-bottom: 30px;
+            
+        }
+
+    &:hover,
+    &:focus{
+        .hover{
+            color: $color-accent;
+        }
+
+        .film-news-item__thumbnail{
+           background-color: $color-accent; 
+        }
+
+        .film-news-item__button{
+            background-color: $color-accent;
+        }
+
+    }
+
+    }
+  }
+
+  
+
+
+
+        
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
